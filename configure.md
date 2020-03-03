@@ -15,7 +15,7 @@ There are two ways to configure cloudflare-dns-update: The first one uses an **A
 
 ### Get your Cloudflare Global key
 
-1. At the API Tokens tab of first way, click on **View** button of _**Global API Key**_
+1. At the _**API Tokens**_ tab of first way, click on **View** button of _**Global API Key**_
 2. Enter the **password** and check **'I'm not a robot'**
 3. Copy the key
 
