@@ -2,7 +2,7 @@
 
 * [Overview](README.md)
 * [Configure](configure.md)
-* [Installation](installation.md)
+* [Installation & Usage](installation.md)
 
 ## Functions
 
