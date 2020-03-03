@@ -21,7 +21,7 @@ let dns = new CloudflareDdns({
 
 ```javascript
 const CloudflareDns = require('cloudflare-dns-update');
-let dns = new CloudflareDdns({
+let dns = new CloudflareDns({
     key: 'YOUR_KEY_HERE',
     email: 'your_email@example.com'
 });
