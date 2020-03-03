@@ -1,7 +1,7 @@
 {
   "name": "cloudflare-ddns",
   "version": "0.1.0",
-  "description": "Manage dynamic IPs in Cloudflare DNS programmatically",
+  "description": "Manage dynamic IPs in Cloudflare DNS programmatically. Update dynamic DNS at Cloudflare without relying upon manual changes via the Cloudflare dashboard UI.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/tranphuquy19/cloudflare-ddns/issues"
   },
-  "homepage": "https://github.com/tranphuquy19/cloudflare-ddns#readme"
+  "homepage": "https://github.com/tranphuquy19/cloudflare-ddns#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
 }
