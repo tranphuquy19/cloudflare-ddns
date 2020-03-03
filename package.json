@@ -1,7 +1,7 @@
 {
-  "name": "cloudflare-ddns",
+  "name": "cloudflare-dns-update",
   "version": "0.1.0",
-  "description": "Manage dynamic IPs in Cloudflare DNS programmatically. Update dynamic DNS at Cloudflare without relying upon manual changes via the Cloudflare dashboard UI.",
+  "description": "Dynamic DNS application for Auto Updating Cloudflare DNS records.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
