@@ -1,0 +1,25 @@
+{
+  "name": "cloudflare-ddns",
+  "version": "0.1.0",
+  "description": "Manage dynamic IPs in Cloudflare DNS programmatically",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tranphuquy19/cloudflare-ddns.git"
+  },
+  "keywords": [
+    "cloudflare",
+    "dns",
+    "ddns",
+    "ip"
+  ],
+  "author": "tranphuquy19@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tranphuquy19/cloudflare-ddns/issues"
+  },
+  "homepage": "https://github.com/tranphuquy19/cloudflare-ddns#readme"
+}
