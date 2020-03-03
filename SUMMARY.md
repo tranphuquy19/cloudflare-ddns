@@ -1,4 +1,5 @@
 # Table of contents
 
-* [Cloudflare DNS Records Update](README.md)
+* [Overview](README.md)
+* [Configure](configure.md)
 
