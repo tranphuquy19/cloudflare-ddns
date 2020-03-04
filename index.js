@@ -3,7 +3,7 @@
  * @author: tranphuquy19@gmail.com
  */
 'use strict'
-const {getAllDnsRecords, getDnsRecordById} = require('./lib/dns');
+const {getAllDnsRecords, getDnsRecordById, updateDnsRecord} = require('./lib/dns');
 
 Object.prototype.isEmpty = function () {
     for (let key in this) {
@@ -35,7 +35,8 @@ module.exports = class CloudflareDdns {
         this.zoneId = opt.zoneId;
     }
 
-    getAllDnsRecords () {
+    getAllDnsRecords() {
+        if (!checkAuth()) return;
         if (this.zoneId.isEmpty()) {
             throw new Error('Zone ID is missing');
         } else {
@@ -43,19 +44,37 @@ module.exports = class CloudflareDdns {
         }
     };
 
-    getDnsRecordById(dnsId){
-        if(dnsId.isEmpty()){
-            throw new Error("DNS ID is missing");
-        }else {
+    getDnsRecordById(dnsId) {
+        if (!checkAuth()) return;
+        if (dnsId.isEmpty()) {
+            throw new Error('DNS ID is missing');
+        } else {
             return getDnsRecordById(dnsId, {...this});
+        }
+    };
+
+    updateDnsRecord(dnsId, newDnsRecord) {
+        if (!checkAuth()) return;
+        if (dnsId.isEmty()) {
+            throw new Error('DNS ID is missing');
+        } else {
+            return updateDnsRecord(dnsId, {...this, ...newDnsRecord});
         }
     }
 
-    checkAuth(){
-        if(this.key.isEmpty() || this.email.isEmpty() ){
-            throw new Error("")
+    checkAuth() {
+        if (!this.token.isEmpty()) {
+            return true;
+        } else {
+            if (this.key.isEmpty() || this.email.isEmpty()) {
+                throw new Error('Global key or Email is missing');
+            } else {
+                return true;
+            }
         }
+        throw new Error('Authentication information is missing');
     }
+
     toString(cb = JSON.stringify) {
         console.log(cb({token: this.token, key: this.key, email: this.email}));
     }

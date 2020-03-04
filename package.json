@@ -1,6 +1,6 @@
 {
   "name": "cloudflare-dns-update",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dynamic DNS application for Auto Updating Cloudflare DNS records.",
   "main": "index.js",
   "scripts": {
